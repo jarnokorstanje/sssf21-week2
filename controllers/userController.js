@@ -12,7 +12,7 @@ const user_get = (req, res) => {
   const id = req.params.id;
   const user = users.filter((user) => user.id === id).pop();
   res.json(user);
-}
+};
 
 module.exports = {
   user_list_get,

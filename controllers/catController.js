@@ -12,7 +12,7 @@ const cat_get = (req, res) => {
   const id = req.params.id;
   const cat = cats.filter((cat) => cat.id === id).pop();
   res.json(cat);
-}
+};
 
 module.exports = {
   cat_list_get,

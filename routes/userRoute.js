@@ -1,14 +1,18 @@
 'use strict';
 
 const express = require('express');
-const {user_list_get} = require('../controllers/userController');
+const {user_list_get, user_get} = require('../controllers/userController');
 const router = express.Router();
+
+// const authenticate = (req, res, next) => {
+//   // authentication
+// }
+
+// router.get('/', authenticate, user_list_get);
 
 router.get('/', user_list_get);
 
-router.get('/:id', (req, res) => {
-  res.send('user with id ' + req.params.id);
-});
+router.get('/:id', user_get);
 
 router.post('/', (req, res) => {
   res.send('post');
