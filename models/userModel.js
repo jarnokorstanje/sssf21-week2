@@ -14,7 +14,7 @@ const users = [
   },
 ];
 
-const getUserLogin = async (email) => {
+const getUserLogin = (email) => {
   const user = users.filter((user) => user.email === email).pop();
   return user;
 };
