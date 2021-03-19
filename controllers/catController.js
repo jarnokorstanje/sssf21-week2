@@ -14,7 +14,14 @@ const cat_get = (req, res) => {
   res.json(cat);
 };
 
+const cat_create_post = (req, res) => {
+  console.log('text', req.body);
+  console.log('file', req.file);
+  res.send('create cat');
+};
+
 module.exports = {
   cat_list_get,
   cat_get,
+  cat_create_post,
 };
