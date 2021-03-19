@@ -14,6 +14,12 @@ const users = [
   },
 ];
 
+const getUserLogin = async (email) => {
+  const user = users.filter((user) => user.email === email).pop();
+  return user;
+};
+
 module.exports = {
   users,
+  getUserLogin,
 };
